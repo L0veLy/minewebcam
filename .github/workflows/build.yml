@@ -28,7 +28,7 @@ jobs:
           chmod +x gradle/wrapper/gradle-wrapper.jar
 
       - name: Build with Gradle
-        run: ./gradlew shadowJar
+        run: ./gradlew build
 
       - name: Show all files
         run: find . -type f
