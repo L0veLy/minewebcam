@@ -31,7 +31,10 @@ jobs:
 
       # Собираем проект с ShadowJar
       - name: Build with Gradle
-        run: ./gradlew shadowJar
+        run: ./gradlew shadowJar --stacktrace --info
+
+      - name: Find all jars
+        run: find . -type f -name "*.jar"
 
       # Выводим список собранных файлов
       - name: List build/libs
