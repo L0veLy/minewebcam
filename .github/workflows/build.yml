@@ -30,6 +30,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew shadowJar
 
+      - name: Show all files
+        run: find . -type f
+
       - name: List build/libs
         run: ls -la build/libs
 
