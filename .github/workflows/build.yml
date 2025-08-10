@@ -28,10 +28,10 @@ jobs:
           chmod +x gradle/wrapper/gradle-wrapper.jar
 
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew shadowJar
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: plugin-jar
-          path: build/libs/*.jar
+          name: plugin
+          path: build/libs/*-all.jar
